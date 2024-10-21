@@ -6,6 +6,18 @@
 	text-decoration: none;
 }
 
+body > nav > div.logo > a {
+	text-decoration: none;
+	color: white;
+}
+body > nav > div.logo > a:hover {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+button:hover {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
 /* Neumorphism styles */
 body {
 	font-family: Arial, sans-serif;
@@ -56,6 +68,11 @@ nav {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	font-weight: bold;
+}
+
+.container button:hover {
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .title {
@@ -83,6 +100,10 @@ nav {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+.menu button:hover {
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .workspace {
@@ -211,6 +232,11 @@ footer:active {
 	box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 	transition: all 0.3s ease;
 }
+
+.collapsible button:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
 .collapsible ul {
 	padding-left: 20px; /* Indents the list */
 }
