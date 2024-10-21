@@ -110,6 +110,7 @@ textarea {
 	border: 1px solid #ccc;
 	resize: vertical;
 	font-size: 0.75rem;
+	padding: 7px 5px;
 }
 
 .resizable {
