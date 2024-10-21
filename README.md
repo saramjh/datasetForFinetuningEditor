@@ -1,6 +1,8 @@
 # GPT Fine-tuning Dataset Editor
 
 ## Overview
+[![Screenshot 2024-10-21 at 15 20 07 중간](https://github.com/user-attachments/assets/ccc60b79-2cbf-4490-8449-0249f13b076e)
+](https://saramjh.github.io/datasetForFinetuningEditor/)
 
 The **GPT Fine-tuning Dataset Editor** is a web-based tool designed to create, modify, and manage datasets in JSONL format specifically for fine-tuning GPT models. The editor provides an intuitive interface to facilitate the preparation of conversation datasets that can be utilized to adapt pre-trained models for specific tasks or domains.
 
