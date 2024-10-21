@@ -60,8 +60,8 @@ nav {
 	flex-direction: column;
 	padding: 10px;
 	margin: 20px 0;
-	width: 600px;
-	max-width: 600px;
+	width: 100%;
+	max-width: 900px;
 }
 
 .container button {
