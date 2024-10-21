@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="JSONL File Editor for GPT Fine-tuning - Easily create, modify, and manage datasets for optimizing GPT models.">
+  <meta name="keywords" content="GPT, Fine-tuning, JSONL, Dataset Editor, Machine Learning">
+  <meta name="author" content="saramjh">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="canonical" href="https://saramjh.github.io/datasetForFinetuningEditor/">
+  <!-- Replace with your actual URL -->
+  <title>GPT Fine-tuning Dataset Editor</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">📝 GPT Fine-tuning Editor</div>
+    <div class="menu">
+      <button id="newFile">New File</button>
+      <input type="file" id="loadFile" style="display: none;">
+      <button id="saveFile">Save</button>
+      <button id="loadButton">Load</button>
+    </div>
+  </nav>
+  <div class="container">
+    <article>
+      <h1>Understanding GPT Fine-tuning</h1> <!-- Add a main heading -->
+      <div class="collapsible">
+        <button onclick="toggleVisibility('fineTuningPurpose', 'datasetEditorUsage')">The Purpose of GPT
+          Fine-tuning</button>
+        <ul id="fineTuningPurpose" style="display:none;">
+          <li>Adapt a pre-trained GPT model for specific tasks or domains.</li>
+          <li>Enhance the model’s responses and relevance for specialized applications.</li>
+        </ul>
+      </div>
+
+      <div class="collapsible">
+        <button onclick="toggleVisibility('datasetEditorUsage', 'fineTuningPurpose')">Using the GPT Fine-tuning Dataset
+          Editor</button>
+        <ul id="datasetEditorUsage" style="display:none;">
+          <li>Create, modify, and manage datasets in JSONL format for fine-tuning.</li>
+          <li>Input data for three roles: system, user, and assistant to view conversation flows.</li>
+          <li>Add new rows for additional conversation turns or remove unnecessary ones.</li>
+          <li>Save files to a specified location and load existing datasets for modification.</li>
+          <li>Validate the dataset to ensure proper format and structure.</li>
+          <li>Tooltips provide guidance on input fields and editing tasks.</li>
+          <li>This editor only supports JSONL files.</li>
+        </ul>
+      </div>
+    </article>
+
+    <section>
+      <h2>Input Fields</h2> <!-- Add a subheading for clarity -->
+      <div class="input-group">
+        <label for="systemContent">
+          System Content<span class="tooltip"
+            data-tooltip="The content should include guiding instructions that define the assistant’s behavior and tone throughout conversations.">?</span>
+        </label>
+        <textarea id="systemContent" rows="2" class="resizable"></textarea>
+      </div>
+      <div id="messageSets"></div>
+      <button id="addSet">Add Message Set</button>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-text">
+      <a href="https://saramjh.github.io/">
+        <p id="pText">&copy; 2024 saramjh reserved.</p>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

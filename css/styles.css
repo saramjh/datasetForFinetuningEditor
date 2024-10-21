@@ -1,0 +1,247 @@
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+/* Neumorphism styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline;
+	position: relative;
+	min-height: 100vh;
+}
+body > div > article > h1 {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+body > div > section > h2 {
+	font-size: 1.5rem;
+	margin-bottom: 0rem;
+}
+
+nav {
+	top: 0;
+	display: flex;
+	width: 100%;
+	background-color: #333;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.logo {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin-bottom: 50px;
+}
+
+.container button {
+	padding: 5px 10px;
+	background-color: #555;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+}
+
+.icon {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu button {
+	margin-left: 0.2rem;
+	padding: 5px 10px;
+	background-color: #555;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.workspace {
+	padding: 20px;
+}
+
+.input-group {
+	padding: 10px 0px;
+}
+
+.input-group > label {
+	line-height: 2rem;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	border: 1px solid #333;
+	padding: 2px 4px;
+	border-radius: 4px;
+	font-weight: bold;
+	padding-left: 0.4rem;
+}
+
+textarea {
+	width: 99%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	resize: vertical;
+	font-size: 0.75rem;
+}
+
+.resizable {
+	resize: vertical;
+	min-height: 50px;
+	max-height: 300px;
+}
+
+.tooltip {
+	cursor: pointer;
+	color: #007bff;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 18px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #000000;
+	color: white;
+	font-size: 12px;
+	margin-left: 3px;
+}
+
+.tooltip:hover::after {
+	content: attr(data-tooltip);
+	white-space: pre-line;
+	position: absolute;
+	background: #333;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 0.7rem;
+	text-align: left;
+	text-transform: capitalize;
+}
+
+#addSet {
+	margin-top: 10px;
+}
+
+footer {
+	display: flex;
+	color: #212121;
+	position: fixed;
+	bottom: 15px;
+	right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 0.7rem;
+	max-width: 500px;
+	padding: 5px 20px;
+	height: 30px;
+	overflow: hidden;
+	z-index: inherit;
+	border-radius: 10px; /* 둥근 모서리 강조 */
+	box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), /* 오른쪽 아래 그림자 */ -8px -8px 15px rgba(255, 255, 255, 0.7); /* 왼쪽 위 빛 */
+	background: #ebeaea; /* 배경색 조정 */
+	z-index: 2;
+}
+
+footer:hover {
+	transition: transform 0.1s ease; /* 눌림 효과를 위한 전환 */
+	background-color: #e3e3e3;
+}
+
+footer:active {
+	transform: scale(0.95); /* 눌릴 때 크기 줄이기 */
+	background-color: #d5d5d5;
+}
+
+.footer-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#pText {
+	margin: 0;
+	color: #989898;
+}
+
+.collapsible {
+	margin-bottom: 20px; /* Adds space between sections */
+}
+.collapsible button {
+	background-color: #e0e0e0; /* Light background for neomorphism */
+	color: #333;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	font-weight: bold;
+	text-align: left;
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+	transition: all 0.3s ease;
+}
+.collapsible ul {
+	padding-left: 20px; /* Indents the list */
+}
+.collapsible ul li {
+	list-style: initial;
+	line-height: 1.5rem;
+	font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+	body > div > article > h1 {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	body > div > section > h2 {
+		font-size: 1rem;
+		margin-bottom: 0rem;
+	}
+	.logo {
+		display: flex;
+		align-items: center;
+		font-size: 0.7rem;
+	}
+	.menu button {
+		margin-left: 0.1rem;
+		padding: 5px 10px;
+		background-color: #555;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 0.7rem;
+	}
+}
