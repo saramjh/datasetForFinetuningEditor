@@ -25,6 +25,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: baseline;
+	align-items: center;
 	position: relative;
 	min-height: 100vh;
 }
@@ -58,7 +59,9 @@ nav {
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
-	margin-bottom: 50px;
+	margin: 20px 0;
+	width: 600px;
+	max-width: 600px;
 }
 
 .container button {
@@ -126,7 +129,7 @@ nav {
 }
 
 textarea {
-	width: 99%;
+	width: 100%;
 	border-radius: 5px;
 	border: 1px solid #ccc;
 	resize: vertical;
@@ -227,7 +230,7 @@ footer:active {
 	cursor: pointer;
 	font-weight: bold;
 	text-align: left;
-	width: 100%;
+	width: auto;
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 	transition: all 0.3s ease;
@@ -247,6 +250,11 @@ footer:active {
 }
 
 @media screen and (max-width: 768px) {
+	#newFile {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 	body > div > article > h1 {
 		font-size: 1rem;
 		margin-bottom: 0.5rem;
@@ -270,5 +278,28 @@ footer:active {
 		border-radius: 5px;
 		cursor: pointer;
 		font-size: 0.7rem;
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		margin-bottom: 50px;
+		width: 100%;
+		max-width: 600px;
+	}
+
+	.collapsible button {
+		background-color: #e0e0e0; /* Light background for neomorphism */
+		color: #333;
+		font-size: 0.7rem;
+		border: none;
+		padding: 10px;
+		cursor: pointer;
+		font-weight: bold;
+		text-align: left;
+		width: auto;
+		border-radius: 10px;
+		box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+		transition: all 0.3s ease;
 	}
 }
